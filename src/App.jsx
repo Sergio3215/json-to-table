@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [jsonString, setJsonString] = useState('{"key": {"myKey":"value"}, "other":"mykey1", "items":{"id":1,"name":"asscend","typeof":"Linx"},"anotherItems":{"id":1,"items":[{"id":0,"name":"hola","category":"Wave"}]}}');
+  const [jsonString, setJsonString] = useState('{"key": {"myKey":"value"}, "other":"mykey1", "items":{"id":1,"name":"asscend","typeof":"Linx"},"anotherItems":{"id":1,"items":[{"id":0,"name":"wave minion","category":"Wave"}]}}');
   const [tableData, setTableData] = useState([]);
 
   const [prefixItems, setPrefixItems] = useState('.');
@@ -63,6 +63,7 @@ function App() {
         <div>
           <h2>Json to Convert</h2>
           <textarea
+            placeholder='Add me your JSON'
             onChange={(e) => setJsonString(e.target.value)}
             value={jsonString}
             rows="10"
